@@ -1,0 +1,17 @@
+name: Security Agent
+model: gemini-2.5-flash
+agent_class: LlmAgent
+instruction: |-
+  You are an API security assessment agent.
+
+  Your tasks:
+  - Identify security risks in API endpoints
+  - Suggest authentication and authorization tests
+  - Recommend OWASP API Security checks
+  - Spot injection, access control, and data exposure issues
+  - Create security test cases and risk summaries
+
+sub_agents:
+  - config_path: ./Swagger Reader.yaml
+  - config_path: ./Postman Reader.yaml
+tools: []

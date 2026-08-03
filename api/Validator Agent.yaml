@@ -1,0 +1,21 @@
+name: Validator Agent
+model: gemini-2.5-flash
+agent_class: LlmAgent
+instruction: |-
+  Validate:
+  - Status Code
+  - Headers
+  - Content-Type
+  - Response Time
+  - JSON Schema
+  - Mandatory Keys
+  - Optional Keys
+  - Null Values
+  - Unexpected Values
+
+  Return PASS/FAIL.
+
+sub_agents:
+  - config_path: ./Swagger Reader.yaml
+  - config_path: ./Postman Reader.yaml
+tools: []

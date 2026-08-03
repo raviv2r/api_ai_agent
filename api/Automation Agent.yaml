@@ -1,0 +1,19 @@
+name: Automation Agent
+model: gemini-2.5-flash
+agent_class: LlmAgent
+instruction: |-
+  Generate automation code in:
+  - Python Requests
+  - Pytest
+  - Playwright API
+  - Postman
+
+  Use reusable functions.
+  Use assertions.
+  Use logging.
+  Use proper exception handling.
+
+sub_agents:
+  - config_path: ./Swagger Reader.yaml
+  - config_path: ./Postman Reader.yaml
+tools: []

@@ -1,0 +1,22 @@
+name: Postman Reader
+model: gemini-2.5-flash
+agent_class: LlmAgent
+instruction: |-
+  Read Postman Collection.
+
+  Extract:
+  - Folders
+  - Requests
+  - Variables
+  - Headers
+  - Bodies
+  - Authentication
+
+  Generate automation code.
+
+  Generate test cases.
+
+  Generate documentation.
+
+sub_agents: []
+tools: []
