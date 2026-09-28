@@ -26,7 +26,7 @@ def generate_test_cases(api_url, method):
 
     llm = ChatGroq(
         temperature=0.3,
-        model="llama-3.3-70b-versatile",
+        model=os.getenv("GROQ_MODEL", "openai/gpt-oss-20b"),
         api_key=_get_groq_api_key(),
         http_client=http_client,
     )

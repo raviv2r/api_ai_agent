@@ -1,0 +1,25 @@
+# Environment variables (secrets - never push this)
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Excel reports (generated at runtime)
+*.xlsx
+api_report.csv
+
+# ADK session files
+.adk/
+
+# Streamlit secrets (local only)
+.streamlit/secrets.toml
+
+# Temp files
+tmp_*.py
+
+# Virtual environment
+venv/
+env/
+.venv/
